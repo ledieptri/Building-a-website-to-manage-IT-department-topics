@@ -1,3 +1,8 @@
+Group 07:
+20110391 - Lương Minh Nhật
+20110392 - Nguyễn Tấn Phước
+20110421 - Lê Diệp Trí
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
