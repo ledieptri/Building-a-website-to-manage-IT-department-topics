@@ -151,7 +151,7 @@ const ViewStudent = () => {
                     <Table>
                         <TableHead>
                             <StyledTableRow>
-                                <StyledTableCell>Subject</StyledTableCell>
+                                <StyledTableCell>Thesis</StyledTableCell>
                                 <StyledTableCell>Present</StyledTableCell>
                                 <StyledTableCell>Total Sessions</StyledTableCell>
                                 <StyledTableCell>Attendance Percentage</StyledTableCell>
@@ -272,12 +272,12 @@ const ViewStudent = () => {
         const renderTableSection = () => {
             return (
                 <>
-                    <h3>Subject Marks:</h3>
+                    <h3>Thesis Progress:</h3>
                     <Table>
                         <TableHead>
                             <StyledTableRow>
-                                <StyledTableCell>Subject</StyledTableCell>
-                                <StyledTableCell>Marks</StyledTableCell>
+                                <StyledTableCell>Thesis</StyledTableCell>
+                                <StyledTableCell>Progress</StyledTableCell>
                             </StyledTableRow>
                         </TableHead>
                         <TableBody>
@@ -295,7 +295,7 @@ const ViewStudent = () => {
                         </TableBody>
                     </Table>
                     <Button variant="contained" sx={styles.styledButton} onClick={() => navigate("/Admin/students/student/marks/" + studentID)}>
-                        Add Marks
+                        Add Progress
                     </Button>
                 </>
             )
@@ -332,7 +332,7 @@ const ViewStudent = () => {
                     </>
                     :
                     <Button variant="contained" sx={styles.styledButton} onClick={() => navigate("/Admin/students/student/marks/" + studentID)}>
-                        Add Marks
+                        Add Progress
                     </Button>
                 }
             </>
@@ -411,7 +411,7 @@ const ViewStudent = () => {
                                 <TabList onChange={handleChange} sx={{ position: 'fixed', width: '100%', bgcolor: 'background.paper', zIndex: 1 }}>
                                     <Tab label="Details" value="1" />
                                     <Tab label="Attendance" value="2" />
-                                    <Tab label="Marks" value="3" />
+                                    <Tab label="Progress" value="3" />
                                 </TabList>
                             </Box>
                             <Container sx={{ marginTop: "3rem", marginBottom: "4rem" }}>

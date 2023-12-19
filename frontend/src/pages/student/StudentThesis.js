@@ -42,13 +42,13 @@ const StudentSubjects = () => {
         return (
             <>
                 <Typography variant="h4" align="center" gutterBottom>
-                    Subject Marks
+                    Thesis Progress
                 </Typography>
                 <Table>
                     <TableHead>
                         <StyledTableRow>
-                            <StyledTableCell>Subject</StyledTableCell>
-                            <StyledTableCell>Marks</StyledTableCell>
+                            <StyledTableCell>Thesis</StyledTableCell>
+                            <StyledTableCell>Progress</StyledTableCell>
                         </StyledTableRow>
                     </TableHead>
                     <TableBody>

@@ -70,7 +70,7 @@ const ViewStdAttendance = () => {
                 <Table>
                     <TableHead>
                         <StyledTableRow>
-                            <StyledTableCell>Subject</StyledTableCell>
+                            <StyledTableCell>Thesis</StyledTableCell>
                             <StyledTableCell>Present</StyledTableCell>
                             <StyledTableCell>Total Sessions</StyledTableCell>
                             <StyledTableCell>Attendance Percentage</StyledTableCell>

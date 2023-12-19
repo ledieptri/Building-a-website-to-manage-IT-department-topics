@@ -39,7 +39,7 @@ const TeacherClassDetails = () => {
     })
 
     const StudentsButtonHaver = ({ row }) => {
-        const options = ['Take Attendance', 'Provide Marks'];
+        const options = ['Take Attendance', 'Progress'];
 
         const [open, setOpen] = React.useState(false);
         const anchorRef = React.useRef(null);
@@ -82,7 +82,7 @@ const TeacherClassDetails = () => {
                 <BlueButton
                     variant="contained"
                     onClick={() =>
-                        navigate("/Teacher/class/student/" + row.id)
+                        navigate("/Teacher/year/student/" + row.id)
                     }
                 >
                     View

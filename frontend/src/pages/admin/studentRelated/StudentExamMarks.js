@@ -115,7 +115,7 @@ const StudentExamMarks = ({ situation }) => {
                                 </Typography>
                                 {currentUser.teachSubject &&
                                     <Typography variant="h4">
-                                        Subject Name: {currentUser.teachSubject?.subName}
+                                        Thesis Name: {currentUser.teachSubject?.subName}
                                     </Typography>
                                 }
                             </Stack>
@@ -125,7 +125,7 @@ const StudentExamMarks = ({ situation }) => {
                                         situation === "Student" &&
                                         <FormControl fullWidth>
                                             <InputLabel id="demo-simple-select-label">
-                                                Select Subject
+                                                Select Thesis
                                             </InputLabel>
                                             <Select
                                                 labelId="demo-simple-select-label"
@@ -142,14 +142,14 @@ const StudentExamMarks = ({ situation }) => {
                                                     ))
                                                     :
                                                     <MenuItem value="Select Subject">
-                                                        Add Subjects For Marks
+                                                        Add Thesis For Progress
                                                     </MenuItem>
                                                 }
                                             </Select>
                                         </FormControl>
                                     }
                                     <FormControl>
-                                        <TextField type="number" label='Enter marks'
+                                        <TextField type="number" label='Enter progress'
                                             value={marksObtained} required
                                             onChange={(e) => setMarksObtained(e.target.value)}
                                             InputLabelProps={{

@@ -72,7 +72,7 @@ const TeacherViewStudent = () => {
                     <br />
                     Roll Number: {userDetails.rollNum}
                     <br />
-                    Class: {sclassName.sclassName}
+                    School Year: {sclassName.sclassName}
                     <br />
                     School: {studentSchool.schoolName}
                     <br /><br />
@@ -89,7 +89,7 @@ const TeacherViewStudent = () => {
                                         <Table key={index}>
                                             <TableHead>
                                                 <StyledTableRow>
-                                                    <StyledTableCell>Subject</StyledTableCell>
+                                                    <StyledTableCell>Thesis</StyledTableCell>
                                                     <StyledTableCell>Present</StyledTableCell>
                                                     <StyledTableCell>Total Sessions</StyledTableCell>
                                                     <StyledTableCell>Attendance Percentage</StyledTableCell>
@@ -169,7 +169,7 @@ const TeacherViewStudent = () => {
                         Add Attendance
                     </Button>
                     <br /><br /><br />
-                    <h3>Subject Marks:</h3>
+                    <h3>Thesis Progress:</h3>
 
                     {subjectMarks && Array.isArray(subjectMarks) && subjectMarks.length > 0 &&
                         <>
@@ -179,8 +179,8 @@ const TeacherViewStudent = () => {
                                         <Table key={index}>
                                             <TableHead>
                                                 <StyledTableRow>
-                                                    <StyledTableCell>Subject</StyledTableCell>
-                                                    <StyledTableCell>Marks</StyledTableCell>
+                                                    <StyledTableCell>Thesis</StyledTableCell>
+                                                    <StyledTableCell>Progress</StyledTableCell>
                                                 </StyledTableRow>
                                             </TableHead>
                                             <TableBody>
@@ -204,7 +204,7 @@ const TeacherViewStudent = () => {
                             navigate(
                                 `/Teacher/class/student/marks/${studentID}/${teachSubjectID}`
                             )}>
-                        Add Marks
+                        Add Progress
                     </PurpleButton>
                     <br /><br /><br />
                 </div>

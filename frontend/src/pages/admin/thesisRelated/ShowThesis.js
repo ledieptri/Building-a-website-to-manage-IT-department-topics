@@ -63,7 +63,7 @@ const ShowSubjects = () => {
         return (
             <>              
                 <BlueButton variant="contained"
-                    onClick={() => navigate(`/Admin/subjects/subject/${row.sclassID}/${row.id}`)}>
+                    onClick={() => navigate(`/Admin/thesiss/thesis/${row.sclassID}/${row.id}`)}>
                     View
                 </BlueButton>
                 <IconButton onClick={() => deleteHandler(row.id, "Subject")} color="secondary">
