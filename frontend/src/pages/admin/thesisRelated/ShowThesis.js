@@ -75,7 +75,7 @@ const ShowSubjects = () => {
     const actions = [
         {
             icon: <PostAddIcon color="primary" />, name: 'Add New Thesis',
-            action: () => navigate("/Admin/subjects/chooseclass")
+            action: () => navigate("/Admin/thesis/chooseyear")
         },
         {
             icon: <DeleteIcon color="error" />, name: 'Delete All Thesis',
@@ -92,7 +92,7 @@ const ShowSubjects = () => {
                     {response ?
                         <Box sx={{ display: 'flex', justifyContent: 'flex-end', marginTop: '16px' }}>
                             <GreenButton variant="contained"
-                                onClick={() => navigate("/Admin/subjects/chooseclass")}>
+                                onClick={() => navigate("/Admin/thesis/chooseyear")}>
                                 Add Thesis
                             </GreenButton>
                         </Box>

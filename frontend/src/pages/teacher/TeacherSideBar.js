@@ -23,11 +23,11 @@ const TeacherSideBar = () => {
                     </ListItemIcon>
                     <ListItemText primary="Home" />
                 </ListItemButton>
-                <ListItemButton component={Link} to="/Teacher/class">
+                <ListItemButton component={Link} to="/Teacher/year">
                     <ListItemIcon>
-                        <ClassOutlinedIcon color={location.pathname.startsWith("/Teacher/class") ? 'primary' : 'inherit'} />
+                        <ClassOutlinedIcon color={location.pathname.startsWith("/Teacher/year") ? 'primary' : 'inherit'} />
                     </ListItemIcon>
-                    <ListItemText primary={`Class ${sclassName.sclassName}`} />
+                    <ListItemText primary={`Year ${sclassName.sclassName}`} />
                 </ListItemButton>
                 <ListItemButton component={Link} to="/Teacher/complain">
                     <ListItemIcon>

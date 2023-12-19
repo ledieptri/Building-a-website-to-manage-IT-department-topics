@@ -81,8 +81,8 @@ const TeacherDashboard = () => {
 
                         <Route path="/Teacher/complain" element={<TeacherComplain />} />
 
-                        <Route path="/Teacher/class" element={<TeacherClassDetails />} />
-                        <Route path="/Teacher/class/student/:id" element={<TeacherViewStudent />} />
+                        <Route path="/Teacher/year" element={<TeacherClassDetails />} />
+                        <Route path="/Teacher/year/student/:id" element={<TeacherViewStudent />} />
 
                         <Route path="/Teacher/class/student/attendance/:studentID/:subjectID" element={<StudentAttendance situation="Subject" />} />
                         <Route path="/Teacher/class/student/marks/:studentID/:subjectID" element={<StudentExamMarks situation="Subject" />} />

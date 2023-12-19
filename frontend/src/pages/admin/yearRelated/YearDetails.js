@@ -60,8 +60,8 @@ const YearDetails = () => {
     }
 
     const subjectColumns = [
-        { id: 'name', label: 'Subject Name', minWidth: 170 },
-        { id: 'code', label: 'Subject Code', minWidth: 100 },
+        { id: 'name', label: 'Thesis Name', minWidth: 170 },
+        { id: 'code', label: 'Thesis Code', minWidth: 100 },
     ]
 
     const subjectRows = subjectsList && subjectsList.length > 0 && subjectsList.map((subject) => {
@@ -93,7 +93,7 @@ const YearDetails = () => {
     const subjectActions = [
         {
             icon: <PostAddIcon color="primary" />, name: 'Add New Thesis',
-            action: () => navigate("/Admin/addsubject/" + classID)
+            action: () => navigate("/Admin/addthesis/" + classID)
         },
         {
             icon: <DeleteIcon color="error" />, name: 'Delete All Thesis',
@@ -108,7 +108,7 @@ const YearDetails = () => {
                     <Box sx={{ display: 'flex', justifyContent: 'flex-end', marginTop: '16px' }}>
                         <GreenButton
                             variant="contained"
-                            onClick={() => navigate("/Admin/addsubject/" + classID)}
+                            onClick={() => navigate("/Admin/addthesis/" + classID)}
                         >
                             Add Thesis
                         </GreenButton>
@@ -240,7 +240,7 @@ const YearDetails = () => {
                 {response &&
                     <GreenButton
                         variant="contained"
-                        onClick={() => navigate("/Admin/addsubject/" + classID)}
+                        onClick={() => navigate("/Admin/addthesis/" + classID)}
                     >
                         Add Thesis
                     </GreenButton>

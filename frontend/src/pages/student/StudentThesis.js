@@ -33,11 +33,6 @@ const StudentSubjects = () => {
         }
     }, [userDetails])
 
-    useEffect(() => {
-        if (subjectMarks === []) {
-            dispatch(getSubjectList(currentUser.sclassName._id, "ClassSubjects"));
-        }
-    }, [subjectMarks, dispatch, currentUser.sclassName._id]);
 
     const handleSectionChange = (event, newSection) => {
         setSelectedSection(newSection);
@@ -82,13 +77,13 @@ const StudentSubjects = () => {
         return (
             <Container>
                 <Typography variant="h4" align="center" gutterBottom>
-                    Class Details
+                    School Year Details
                 </Typography>
                 <Typography variant="h5" gutterBottom>
-                    You are currently in Class {sclassDetails && sclassDetails.sclassName}
+                    You are currently in school year {sclassDetails && sclassDetails.sclassName}
                 </Typography>
                 <Typography variant="h6" gutterBottom>
-                    And these are the subjects:
+                    And these are the Thesis:
                 </Typography>
                 {subjectsList &&
                     subjectsList.map((subject, index) => (

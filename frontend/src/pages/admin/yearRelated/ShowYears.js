@@ -60,7 +60,7 @@ const ShowYears = () => {
 
   const SclassButtonHaver = ({ row }) => {
     const actions = [
-      { icon: <PostAddIcon />, name: 'Add Subjects', action: () => navigate("/Admin/addsubject/" + row.id) },
+      { icon: <PostAddIcon />, name: 'Add Subjects', action: () => navigate("/Admin/addthesis/" + row.id) },
       { icon: <PersonAddAlt1Icon />, name: 'Add Student', action: () => navigate("/Admin/class/addstudents/" + row.id) },
     ];
     return (
@@ -69,7 +69,7 @@ const ShowYears = () => {
           <DeleteIcon color="error" />
         </IconButton>
         <BlueButton variant="contained"
-          onClick={() => navigate("/Admin/classes/class/" + row.id)}>
+          onClick={() => navigate("/Admin/years/year/" + row.id)}>
           View
         </BlueButton>
         <ActionMenu actions={actions} />
@@ -134,7 +134,7 @@ const ShowYears = () => {
   const actions = [
     {
       icon: <AddCardIcon color="primary" />, name: 'Add New Class',
-      action: () => navigate("/Admin/addclass")
+      action: () => navigate("/Admin/addyear")
     },
     {
       icon: <DeleteIcon color="error" />, name: 'Delete All Classes',
@@ -150,7 +150,7 @@ const ShowYears = () => {
         <>
           {getresponse ?
             <Box sx={{ display: 'flex', justifyContent: 'flex-end', marginTop: '16px' }}>
-              <GreenButton variant="contained" onClick={() => navigate("/Admin/addclass")}>
+              <GreenButton variant="contained" onClick={() => navigate("/Admin/addyear")}>
                 Add Class
               </GreenButton>
             </Box>

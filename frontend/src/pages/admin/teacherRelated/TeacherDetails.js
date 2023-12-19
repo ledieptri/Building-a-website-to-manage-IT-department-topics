@@ -23,7 +23,7 @@ const TeacherDetails = () => {
     const isSubjectNamePresent = teacherDetails?.teachSubject?.subName;
 
     const handleAddSubject = () => {
-        navigate(`/Admin/teachers/choosesubject/${teacherDetails?.teachSclass?._id}/${teacherDetails?._id}`);
+        navigate(`/Admin/teachers/choosethesis/${teacherDetails?.teachSclass?._id}/${teacherDetails?._id}`);
     };
 
     return (

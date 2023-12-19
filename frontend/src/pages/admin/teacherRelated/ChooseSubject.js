@@ -39,7 +39,7 @@ const ChooseSubject = ({ situation }) => {
             <h1>Sorry all subjects have teachers assigned already</h1>
             <Box sx={{ display: 'flex', justifyContent: 'flex-end', marginTop: '16px' }}>
                 <PurpleButton variant="contained"
-                    onClick={() => navigate("/Admin/addsubject/" + classID)}>
+                    onClick={() => navigate("/Admin/addthesis/" + classID)}>
                     Add Subjects
                 </PurpleButton>
             </Box>
