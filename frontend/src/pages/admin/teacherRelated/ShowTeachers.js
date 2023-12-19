@@ -13,6 +13,8 @@ import { BlueButton, GreenButton } from '../../../components/buttonStyles';
 import PersonAddAlt1Icon from '@mui/icons-material/PersonAddAlt1';
 import SpeedDialTemplate from '../../../components/SpeedDialTemplate';
 import Popup from '../../../components/Popup';
+import EditIcon from '@mui/icons-material/Edit';
+
 
 const ShowTeachers = () => {
     const [page, setPage] = useState(0);
@@ -133,13 +135,16 @@ const ShowTeachers = () => {
                                             );
                                         })}
                                         <StyledTableCell align="center">
-                                            <IconButton onClick={() => deleteHandler(row.id, "Teacher")}>
-                                                <PersonRemoveIcon color="error" />
-                                            </IconButton>
                                             <BlueButton variant="contained"
                                                 onClick={() => navigate("/Admin/teachers/teacher/" + row.id)}>
                                                 View
                                             </BlueButton>
+                                            <IconButton onClick={() => deleteHandler(row.id, "Subject")} color="secondary">
+                                                <EditIcon/>
+                                            </IconButton>
+                                            <IconButton onClick={() => deleteHandler(row.id, "Teacher")}>
+                                                <PersonRemoveIcon color="error" />
+                                            </IconButton>
                                         </StyledTableCell>
                                     </StyledTableRow>
                                 );

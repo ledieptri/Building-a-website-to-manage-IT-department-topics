@@ -23,6 +23,8 @@ import Popper from '@mui/material/Popper';
 import MenuItem from '@mui/material/MenuItem';
 import MenuList from '@mui/material/MenuList';
 import Popup from '../../../components/Popup';
+import EditIcon from '@mui/icons-material/Edit';
+
 
 const ShowStudents = () => {
 
@@ -110,13 +112,16 @@ const ShowStudents = () => {
         };
         return (
             <>
-                <IconButton onClick={() => deleteHandler(row.id, "Student")}>
-                    <PersonRemoveIcon color="error" />
-                </IconButton>
                 <BlueButton variant="contained"
                     onClick={() => navigate("/Admin/students/student/" + row.id)}>
                     View
                 </BlueButton>
+                <IconButton onClick={() => deleteHandler(row.id, "Subject")} color="secondary">
+                    <EditIcon/>
+                </IconButton>
+                <IconButton onClick={() => deleteHandler(row.id, "Student")}>
+                    <PersonRemoveIcon color="error" />
+                </IconButton>
                 <React.Fragment>
                     <ButtonGroup variant="contained" ref={anchorRef} aria-label="split button">
                         <Button onClick={handleClick}>{options[selectedIndex]}</Button>

@@ -8,6 +8,7 @@ import {
     Paper, Box, IconButton,
 } from '@mui/material';
 import DeleteIcon from "@mui/icons-material/Delete";
+import EditIcon from '@mui/icons-material/Edit';
 import TableTemplate from '../../../components/TableTemplate';
 import { BlueButton, GreenButton } from '../../../components/buttonStyles';
 import SpeedDialTemplate from '../../../components/SpeedDialTemplate';
@@ -60,14 +61,17 @@ const ShowSubjects = () => {
 
     const SubjectsButtonHaver = ({ row }) => {
         return (
-            <>
-                <IconButton onClick={() => deleteHandler(row.id, "Subject")}>
-                    <DeleteIcon color="error" />
-                </IconButton>
+            <>              
                 <BlueButton variant="contained"
                     onClick={() => navigate(`/Admin/subjects/subject/${row.sclassID}/${row.id}`)}>
                     View
                 </BlueButton>
+                <IconButton onClick={() => deleteHandler(row.id, "Subject")} color="secondary">
+                    <EditIcon/>
+                </IconButton>
+                <IconButton onClick={() => deleteHandler(row.id, "Subject")}>
+                    <DeleteIcon color="error" />
+                </IconButton>
             </>
         );
     };

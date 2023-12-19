@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { IconButton, Box, Menu, MenuItem, ListItemIcon, Tooltip } from '@mui/material';
 import DeleteIcon from "@mui/icons-material/Delete";
+import EditIcon from '@mui/icons-material/Edit';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { deleteUser } from '../../../redux/userRelated/userHandle';
@@ -60,18 +61,21 @@ const ShowYears = () => {
 
   const SclassButtonHaver = ({ row }) => {
     const actions = [
-      { icon: <PostAddIcon />, name: 'Add Subjects', action: () => navigate("/Admin/addthesis/" + row.id) },
+      { icon: <PostAddIcon />, name: 'Add Thesis', action: () => navigate("/Admin/addthesis/" + row.id) },
       { icon: <PersonAddAlt1Icon />, name: 'Add Student', action: () => navigate("/Admin/class/addstudents/" + row.id) },
     ];
     return (
       <ButtonContainer>
-        <IconButton onClick={() => deleteHandler(row.id, "Sclass")} color="secondary">
-          <DeleteIcon color="error" />
-        </IconButton>
         <BlueButton variant="contained"
           onClick={() => navigate("/Admin/years/year/" + row.id)}>
           View
         </BlueButton>
+        <IconButton onClick={() => deleteHandler(row.id, "Sclass")} color="secondary">
+          <EditIcon/>
+        </IconButton>
+        <IconButton onClick={() => deleteHandler(row.id, "Sclass")} color="secondary">
+          <DeleteIcon color="error" />
+        </IconButton>
         <ActionMenu actions={actions} />
       </ButtonContainer>
     );

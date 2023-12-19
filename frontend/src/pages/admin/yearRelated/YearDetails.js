@@ -18,6 +18,8 @@ import SpeedDialTemplate from "../../../components/SpeedDialTemplate";
 import Popup from "../../../components/Popup";
 import DeleteIcon from "@mui/icons-material/Delete";
 import PostAddIcon from '@mui/icons-material/PostAdd';
+import EditIcon from '@mui/icons-material/Edit';
+
 
 const YearDetails = () => {
     const params = useParams()
@@ -75,9 +77,6 @@ const YearDetails = () => {
     const SubjectsButtonHaver = ({ row }) => {
         return (
             <>
-                <IconButton onClick={() => deleteHandler(row.id, "Subject")}>
-                    <DeleteIcon color="error" />
-                </IconButton>
                 <BlueButton
                     variant="contained"
                     onClick={() => {
@@ -86,6 +85,12 @@ const YearDetails = () => {
                 >
                     View
                 </BlueButton >
+                <IconButton onClick={() => deleteHandler(row.id, "Subject")} color="secondary">
+                    <EditIcon/>
+                </IconButton>
+                <IconButton onClick={() => deleteHandler(row.id, "Subject")}>
+                    <DeleteIcon color="error" />
+                </IconButton>
             </>
         );
     };
@@ -143,15 +148,18 @@ const YearDetails = () => {
     const StudentsButtonHaver = ({ row }) => {
         return (
             <>
-                <IconButton onClick={() => deleteHandler(row.id, "Student")}>
-                    <PersonRemoveIcon color="error" />
-                </IconButton>
                 <BlueButton
                     variant="contained"
                     onClick={() => navigate("/Admin/students/student/" + row.id)}
                 >
                     View
                 </BlueButton>
+                <IconButton onClick={() => deleteHandler(row.id, "Subject")} color="secondary">
+                    <EditIcon/>
+                </IconButton>
+                <IconButton onClick={() => deleteHandler(row.id, "Student")}>
+                    <PersonRemoveIcon color="error" />
+                </IconButton>
                 <PurpleButton
                     variant="contained"
                     onClick={() =>
