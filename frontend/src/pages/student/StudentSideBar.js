@@ -8,12 +8,16 @@ import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined
 import AnnouncementOutlinedIcon from '@mui/icons-material/AnnouncementOutlined';
 import ClassOutlinedIcon from '@mui/icons-material/ClassOutlined';
 import AssignmentIcon from '@mui/icons-material/Assignment';
+import LogoTruong from "../../assets/LogoTruong.png";
 
 const StudentSideBar = () => {
     const location = useLocation();
     return (
         <>
             <React.Fragment>
+                <ListItemButton>
+                    <img src={LogoTruong} alt="students" style={{ width: '100%' }} />
+                </ListItemButton>
                 <ListItemButton component={Link} to="/">
                     <ListItemIcon>
                         <HomeIcon color={location.pathname === ("/" || "/Student/dashboard") ? 'primary' : 'inherit'} />
@@ -32,11 +36,11 @@ const StudentSideBar = () => {
                     </ListItemIcon>
                     <ListItemText primary="Attendance" />
                 </ListItemButton>
-                <ListItemButton component={Link} to="/Student/complain">
+                <ListItemButton component={Link} to="/Student/comment">
                     <ListItemIcon>
-                        <AnnouncementOutlinedIcon color={location.pathname.startsWith("/Student/complain") ? 'primary' : 'inherit'} />
+                        <AnnouncementOutlinedIcon color={location.pathname.startsWith("/Student/comment") ? 'primary' : 'inherit'} />
                     </ListItemIcon>
-                    <ListItemText primary="Complain" />
+                    <ListItemText primary="Comments" />
                 </ListItemButton>
             </React.Fragment>
             <Divider sx={{ my: 1 }} />

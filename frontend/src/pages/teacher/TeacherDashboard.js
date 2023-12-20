@@ -79,13 +79,13 @@ const TeacherDashboard = () => {
                         <Route path="/Teacher/dashboard" element={<TeacherHomePage />} />
                         <Route path="/Teacher/profile" element={<TeacherProfile />} />
 
-                        <Route path="/Teacher/complain" element={<TeacherComplain />} />
+                        <Route path="/Teacher/comment" element={<TeacherComplain />} />
 
                         <Route path="/Teacher/year" element={<TeacherClassDetails />} />
                         <Route path="/Teacher/year/student/:id" element={<TeacherViewStudent />} />
 
                         <Route path="/Teacher/class/student/attendance/:studentID/:subjectID" element={<StudentAttendance situation="Subject" />} />
-                        <Route path="/Teacher/class/student/marks/:studentID/:subjectID" element={<StudentExamMarks situation="Subject" />} />
+                        <Route path="/Teacher/class/student/progress/:studentID/:subjectID" element={<StudentExamMarks situation="Subject" />} />
 
                         <Route path="/logout" element={<Logout />} />
                     </Routes>

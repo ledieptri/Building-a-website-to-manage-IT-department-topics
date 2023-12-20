@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { Container, Grid, Box, Button } from '@mui/material';
 import styled from 'styled-components';
 import Students from "../assets/students.svg";
+import LogoTruong from "../assets/LogoTruong.png";
+import LogoKhoa from "../assets/LogoKhoa.png";
 import { LightPurpleButton } from '../components/buttonStyles';
 
 const Homepage = () => {
@@ -10,6 +12,8 @@ const Homepage = () => {
         <StyledContainer>
             <Grid container spacing={0}>
                 <Grid item xs={12} md={6}>
+                    <img src={LogoTruong} alt="students" style={{ width: '50%' }} />
+                    <img src={LogoKhoa} alt="students" style={{ width: '50%' }} />
                     <img src={Students} alt="students" style={{ width: '100%' }} />
                 </Grid>
                 <Grid item xs={12} md={6}>
@@ -22,9 +26,11 @@ const Homepage = () => {
                             System
                         </StyledTitle>
                         <StyledText>
-                            Streamline Thesis management, School Year organization, and add Students and Faculty.
-                            Seamlessly track attendance, assess performance, and provide feedback.
-                            Access records, view marks, and communicate effortlessly.
+                            20110391 - Luong Minh Nhat
+                            <br/>
+                            20110392 - Nguyen Tan Phuoc
+                            <br/>
+                            20110421 - Le Diep Tri
                         </StyledText>
                         <StyledBox>
                             <StyledLink to="/choose">

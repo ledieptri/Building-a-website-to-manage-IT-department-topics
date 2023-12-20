@@ -91,7 +91,7 @@ const ShowStudents = () => {
             navigate("/Admin/students/student/attendance/" + row.id)
         }
         const handleMarks = () => {
-            navigate("/Admin/students/student/marks/" + row.id)
+            navigate("/Admin/students/student/progress/" + row.id)
         };
 
         const handleMenuItemClick = (event, index) => {

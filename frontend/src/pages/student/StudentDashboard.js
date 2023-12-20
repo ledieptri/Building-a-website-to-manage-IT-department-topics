@@ -78,7 +78,7 @@ const StudentDashboard = () => {
 
                         <Route path="/Student/thesis" element={<StudentSubjects />} />
                         <Route path="/Student/attendance" element={<ViewStdAttendance />} />
-                        <Route path="/Student/complain" element={<StudentComplain />} />
+                        <Route path="/Student/comment" element={<StudentComplain />} />
 
                         <Route path="/logout" element={<Logout />} />
                     </Routes>

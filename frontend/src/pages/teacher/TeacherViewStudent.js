@@ -202,7 +202,7 @@ const TeacherViewStudent = () => {
                     <PurpleButton variant="contained"
                         onClick={() =>
                             navigate(
-                                `/Teacher/class/student/marks/${studentID}/${teachSubjectID}`
+                                `/Teacher/class/student/progress/${studentID}/${teachSubjectID}`
                             )}>
                         Add Progress
                     </PurpleButton>
