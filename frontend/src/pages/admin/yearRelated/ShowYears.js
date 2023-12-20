@@ -155,7 +155,7 @@ const ShowYears = () => {
           {getresponse ?
             <Box sx={{ display: 'flex', justifyContent: 'flex-end', marginTop: '16px' }}>
               <GreenButton variant="contained" onClick={() => navigate("/Admin/addyear")}>
-                Add Class
+                Add School Year
               </GreenButton>
             </Box>
             :

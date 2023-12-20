@@ -143,7 +143,7 @@ const CustomTooltipContent = ({ active, payload, dataKey }) => {
                 ) : (
                     <>
                         <TooltipMain>{subName.subName}</TooltipMain>
-                        <TooltipText>Marks: {marksObtained}</TooltipText>
+                        <TooltipText>Progress: {marksObtained}%</TooltipText>
                     </>
                 )}
             </CustomTooltip>

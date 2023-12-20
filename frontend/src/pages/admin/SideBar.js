@@ -21,7 +21,7 @@ const SideBar = () => {
                 <ListItemButton>
                     <img src={LogoTruong} alt="students" style={{ width: '100%' }} />
                 </ListItemButton>
-                <ListItemButton>
+                <ListItemButton component={Link} to="/">
                     <ListItemIcon>
                         <HomeIcon color={location.pathname === ("/" || "/Admin/dashboard") ? 'primary' : 'inherit'} />
                     </ListItemIcon>

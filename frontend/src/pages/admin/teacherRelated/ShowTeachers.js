@@ -37,7 +37,7 @@ const ShowTeachers = () => {
     } else if (response) {
         return (
             <Box sx={{ display: 'flex', justifyContent: 'flex-end', marginTop: '16px' }}>
-                <GreenButton variant="contained" onClick={() => navigate("/Admin/teachers/choosethesis")}>
+                <GreenButton variant="contained" onClick={() => navigate("/Admin/teachers/chooseyear")}>
                     Add Teacher
                 </GreenButton>
             </Box>
@@ -52,9 +52,9 @@ const ShowTeachers = () => {
         setMessage("Sorry the delete function has been disabled for now.")
         setShowPopup(true)
 
-        // dispatch(deleteUser(deleteID, address)).then(() => {
-        //     dispatch(getAllTeachers(currentUser._id));
-        // });
+        dispatch(deleteUser(deleteID, address)).then(() => {
+            dispatch(getAllTeachers(currentUser._id));
+        });
     };
 
     const columns = [
@@ -120,7 +120,7 @@ const ShowTeachers = () => {
                                                         ) : (
                                                             <Button variant="contained"
                                                                 onClick={() => {
-                                                                    navigate(`/Admin/teachers/choosesubject/${row.teachSclassID}/${row.id}`)
+                                                                    navigate(`/Admin/teachers/choosethesis/${row.teachSclassID}/${row.id}`)
                                                                 }}>
                                                                 Add Thesis
                                                             </Button>
