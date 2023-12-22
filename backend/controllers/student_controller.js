@@ -239,7 +239,7 @@ const clearAllStudentsAttendance = async (req, res) => {
     }
 };
 
-const removeStudentAttendanceBySubject = async (req, res) => {
+const removeStudentAttendanceByThesis = async (req, res) => {
     const studentId = req.params.id;
     const subName = req.body.subId
 
@@ -286,6 +286,6 @@ module.exports = {
 
     clearAllStudentsAttendanceBySubject,
     clearAllStudentsAttendance,
-    removeStudentAttendanceBySubject,
+    removeStudentAttendanceByThesis,
     removeStudentAttendance,
 };

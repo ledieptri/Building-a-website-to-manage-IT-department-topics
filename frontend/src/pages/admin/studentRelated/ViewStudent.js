@@ -117,7 +117,7 @@ const ViewStudent = () => {
     }
 
     const removeSubAttendance = (subId) => {
-        dispatch(updateStudentFields(studentID, { subId }, "RemoveStudentSubAtten"))
+        dispatch(updateStudentFields(studentID, { subId }, "RemoveStudentThesisAtten"))
             .then(() => {
                 dispatch(getUserDetails(studentID, address));
             })
@@ -170,9 +170,6 @@ const ViewStudent = () => {
                                                 onClick={() => handleOpen(subId)}>
                                                 {openStates[subId] ? <KeyboardArrowUp /> : <KeyboardArrowDown />}Details
                                             </Button>
-                                            <IconButton onClick={() => removeSubAttendance(subId)}>
-                                                <DeleteIcon color="error" />
-                                            </IconButton>
                                             <Button variant="contained" sx={styles.attendanceButton}
                                                 onClick={() => navigate(`/Admin/subject/student/attendance/${studentID}/${subId}`)}>
                                                 Change
@@ -220,7 +217,7 @@ const ViewStudent = () => {
                     <div>
                         Overall Attendance Percentage: {overallAttendancePercentage.toFixed(2)}%
                     </div>
-                    <Button variant="contained" color="error" startIcon={<DeleteIcon />} onClick={() => removeHandler(studentID, "RemoveStudentAtten")}>Delete All</Button>
+                    {/* <Button variant="contained" color="error" startIcon={<DeleteIcon />} onClick={() => removeHandler(studentID, "RemoveStudentAtten")}>Delete All</Button> */}
                     <Button variant="contained" sx={styles.styledButton} onClick={() => navigate("/Admin/students/student/attendance/" + studentID)}>
                         Add Attendance
                     </Button>

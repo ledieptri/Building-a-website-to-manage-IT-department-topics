@@ -17,7 +17,7 @@ app.use(express.json({ limit: '10mb' }))
 app.use(cors())
 
 mongoose
-    .connect("mongodb://127.0.0.1:27017/SchoolManagement", {
+    .connect("mongodb+srv://20110391:23012002Nhat@managertopic.1e6f7cz.mongodb.net/", {
         useNewUrlParser: true,
         useUnifiedTopology: true
     })
