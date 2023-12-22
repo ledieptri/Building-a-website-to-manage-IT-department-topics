@@ -116,13 +116,6 @@ const ViewStudent = () => {
             })
     }
 
-    const removeSubAttendance = (subId) => {
-        dispatch(updateStudentFields(studentID, { subId }, "RemoveStudentThesisAtten"))
-            .then(() => {
-                dispatch(getUserDetails(studentID, address));
-            })
-    }
-
     const overallAttendancePercentage = calculateOverallAttendancePercentage(subjectAttendance);
     const overallAbsentPercentage = 100 - overallAttendancePercentage;
 
@@ -170,6 +163,11 @@ const ViewStudent = () => {
                                                 onClick={() => handleOpen(subId)}>
                                                 {openStates[subId] ? <KeyboardArrowUp /> : <KeyboardArrowDown />}Details
                                             </Button>
+                                            <IconButton>
+                                                <DeleteIcon color='error'>
+
+                                                </DeleteIcon>
+                                            </IconButton>
                                             <Button variant="contained" sx={styles.attendanceButton}
                                                 onClick={() => navigate(`/Admin/subject/student/attendance/${studentID}/${subId}`)}>
                                                 Change
